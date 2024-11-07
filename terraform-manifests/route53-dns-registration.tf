@@ -8,7 +8,7 @@ resource "aws_route53_record" "apps_dns" {
   zone_id = data.aws_route53_zone.mydomain.zone_id
   alias {
     evaluate_target_health = true
-    name                   = module.alb.dns_name
-    zone_id                = module.alb.zone_id
+    name                   = module.alb.lb_dns_name
+    zone_id                = module.alb.lb_zone_id
   }
 }
