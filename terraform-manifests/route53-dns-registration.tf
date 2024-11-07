@@ -1,5 +1,6 @@
 variable "dns_name" {
   type = string
+  default = "mkhnoori.net"
 }
 resource "aws_route53_record" "apps_dns" {
   name    = var.dns_name
